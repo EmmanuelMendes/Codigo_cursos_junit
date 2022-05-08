@@ -2,9 +2,11 @@ package br.com.projectTest;
 
 
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+
 
 
 public class operadoresTest {
@@ -17,6 +19,11 @@ public class operadoresTest {
 		int esperadoSubtracao = 9;
 		int esperadoDivisao = 5;
 		int esperadoMultiplicacao = 20;
+		
+		int esperadoSoma2 = 6;
+		int esperadoSubtracao2 = 1;
+		int esperadoDivisao2 = 2;
+		int esperadoMultiplicacao2 = 30;
 
 		
 		int soma1 = calculadora.soma(5, 5);
@@ -34,10 +41,10 @@ public class operadoresTest {
 		assertEquals(esperadoDivisao, div1, "metodo divisão");
 		assertEquals(esperadoMultiplicacao, mult1, "método multiplicação");
 		
-		assertEquals(esperadoSoma, soma2, "metodo soma");
-		assertEquals(esperadoSubtracao, sub2, "método divisão");
-		assertEquals(esperadoDivisao, div2, "metodo divisão");
-		assertEquals(esperadoMultiplicacao, mult2, "método multiplicação");
+		assertEquals(esperadoSoma2, soma2, "metodo soma");
+		assertEquals(esperadoSubtracao2, sub2, "método divisão");
+		assertEquals(esperadoDivisao2, div2, "metodo divisão");
+		assertEquals(esperadoMultiplicacao2, mult2, "método multiplicação");
 		
 		
 	}
