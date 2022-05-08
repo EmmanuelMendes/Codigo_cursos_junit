@@ -1,4 +1,4 @@
-<H3 align='center'> Projeto em java, como código de teste de unidade</H3>
+<H3 align='center'> Projeto em java, como código de testes de unidade simples</H3>
 
 ---
 
