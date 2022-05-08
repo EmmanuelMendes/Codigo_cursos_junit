@@ -48,5 +48,13 @@ public class operadoresTest {
 		
 		
 	}
+	@Test
+	public void testeSoma() {
+		operadores soma = new operadores();
+		
+		assertThrows(NullPointerException.class, () -> soma.soma(10, 10), "Valor retornado não era o esperado");
+		
+		
+	}
 
 }
