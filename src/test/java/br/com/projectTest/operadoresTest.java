@@ -2,14 +2,22 @@ package br.com.projectTest;
 
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 
-
 public class operadoresTest {
+	
+	operadores calculoSimples;
+	@BeforeEach
+	public void init() {
+		calculoSimples = new operadores();
+	}
 
 	@Test
 	public void test() {
@@ -50,10 +58,18 @@ public class operadoresTest {
 	}
 	@Test
 	public void testeSoma() {
-		operadores soma = new operadores();
 		
-		assertThrows(NullPointerException.class, () -> soma.soma(10, 10), "Valor retornado não era o esperado");
+		assertThrows(ArithmeticException.class, () -> calculoSimples.div(1, 0), "Valor retornado não era o esperado");
 		
+		
+	}
+	@Test
+	public void testeFuncoes() {
+		funcoes funcao = new funcoes();
+		
+		int funcaoPrimerioGrau = funcao.funcaoPrimeiro(0, 10);
+		int esperado = 10;
+		assertEquals(esperado, funcaoPrimerioGrau, "método funcao do primeiro grau");		
 		
 	}
 
